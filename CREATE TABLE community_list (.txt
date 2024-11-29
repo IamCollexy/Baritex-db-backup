@@ -1,0 +1,15 @@
+CREATE TABLE community_list (
+  id SERIAL PRIMARY KEY,
+  "name" VARCHAR(255) NOT NULL,
+  "email" VARCHAR(255) UNIQUE NOT NULL,
+  "country" VARCHAR(255) NOT NULL,
+  "howDidYouHearAboutUs" VARCHAR(255) NOT NULL,
+  "phoneNumber" VARCHAR(20) NOT NULL,
+  "comments" TEXT,
+  "occupation" VARCHAR(255) NOT NULL,
+  "whereDoYouReside" VARCHAR(255) NOT NULL,
+  "canAttend" BOOLEAN NOT NULL,
+  "howManyPeople" INTEGER NOT NULL,
+  "createdAt" TIMESTAMP NOT NULL DEFAULT NOW(),
+  "updatedAt" TIMESTAMP NOT NULL DEFAULT NOW()
+);
